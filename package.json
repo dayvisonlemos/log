@@ -1,6 +1,6 @@
 {
-  "name": "@flagcard/log",
-  "version": "2.1.9",
+  "name": "@dayvison/log",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,19 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/flagcard/log.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "url": "https://github.com/dayvisonlemos/log.git"
   },
   "author": "dayvison.lemos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/flagcard/log/issues"
+    "url": "https://github.com/dayvisonlemos/log/issues"
   },
-  "homepage": "https://github.com/flagcard/log#readme",
+  "homepage": "https://github.com/dayvisonlemos/log#readme",
   "devDependencies": {
-    "@types/date-fns": "^2.6.0",
     "@types/jest": "^25.2.3",
     "@types/winston": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "^2.31.0",

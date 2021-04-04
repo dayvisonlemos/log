@@ -2,7 +2,7 @@ import winston from 'winston';
 import 'winston-daily-rotate-file';
 import { formatToTimeZone } from 'date-fns-timezone';
 
-const timeZone = 'America/Manaus';
+const timeZone = process.env.timezone || 'GMT';
 
 const format = winston.format.printf(({ level, message, timestamp }) => {
   const localDate = formatToTimeZone(timestamp, 'MMM DD, YYYY @ HH:mm:ss', {
@@ -18,17 +18,6 @@ transports.push(
     format,
   }),
 );
-
-if (process.env.FLAGCARD_WRITE_LOG) {
-  transports.push(
-    new winston.transports.DailyRotateFile({
-      filename: 'logs/application-%DATE%.log',
-      datePattern: 'YYYYMMDDHH',
-      maxSize: '1m',
-      maxFiles: '2d',
-    }),
-  );
-}
 
 export default winston.createLogger({
   level: 'info',

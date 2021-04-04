@@ -1,4 +1,4 @@
-import logger from './src/flagcard/logger';
+import logger from './src/logger';
 
 process.on('uncaughtException', (error: Error) => {
   logger.error(error);
